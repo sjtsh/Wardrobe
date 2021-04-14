@@ -4,6 +4,7 @@ class Logo extends StatelessWidget {
   final Image image;
   final Function setIndex;
   final int index=2;
+  final int index2=20;
 
   Logo(this.image, this.setIndex);
 
@@ -12,6 +13,9 @@ class Logo extends StatelessWidget {
     return TextButton(
       onPressed: (){
         setIndex(index);
+      },
+      onLongPress: (){
+        setIndex(index2);
       },
       child: Align(
         alignment: Alignment.topCenter,

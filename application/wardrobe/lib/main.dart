@@ -6,6 +6,7 @@ import './Home.dart';
 import './Floater.dart';
 import './cart.dart';
 import './Search.dart';
+import './AboutUs.dart';
 
 void main() {
   runApp(Wardrobe());
@@ -43,6 +44,8 @@ class _WardrobeState extends State<Wardrobe> {
       return Expanded(child: Cart());
     } else if (index == 1) {
       return Expanded(child: Search());
+    } else if(index == 20) {
+      return Expanded(child: AboutUs());
     }
     return Expanded(child: Text("NULL"));
   }
