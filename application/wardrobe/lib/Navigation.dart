@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Navigation extends StatelessWidget {
-
   final Function setIndex;
+
   Navigation(this.setIndex);
 
   final int index = 0;

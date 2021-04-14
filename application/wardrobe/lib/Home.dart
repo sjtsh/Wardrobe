@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
                 width: 30,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/Product1.png"),
+                    image: AssetImage("assets/Product1_partition.png"),
                   ),
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(25),
@@ -34,7 +34,8 @@ class Home extends StatelessWidget {
                   width: 250,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      image: DecorationImage(image: AssetImage("assets/Product2.png")),
+                      image: DecorationImage(
+                          image: AssetImage("assets/Product2.png")),
                       borderRadius: BorderRadius.all(Radius.circular(25))),
                 ),
               ),
@@ -45,7 +46,8 @@ class Home extends StatelessWidget {
                 height: 400,
                 width: 30,
                 decoration: BoxDecoration(
-                  image: DecorationImage(image: AssetImage("assets/Product3.png")),
+                  image: DecorationImage(
+                      image: AssetImage("assets/Product3_partition.png")),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(25),
                     bottomLeft: Radius.circular(25),
@@ -59,12 +61,14 @@ class Home extends StatelessWidget {
         Text(
           "Skeleton Tshirt",
           style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 40, color: Colors.white),
+            fontWeight: FontWeight.bold,
+            fontSize: 40,
+            color: Colors.white,
+          ),
         ),
         Text(
           "2500/-",
           style: TextStyle(
-            fontWeight: FontWeight.bold,
             fontSize: 30,
             color: Colors.white,
           ),
@@ -73,7 +77,9 @@ class Home extends StatelessWidget {
           padding: const EdgeInsets.all(15.0),
           child: ElevatedButton(
             onPressed: () {
-              Scaffold.of(context).showSnackBar(SnackBar(content: const Text("Added to cart")));
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: const Text("Added to cart")));
+              print("added to cart");
             },
             style: ElevatedButton.styleFrom(
               primary: Color(0x80ECF0F3).withOpacity(0.8),
