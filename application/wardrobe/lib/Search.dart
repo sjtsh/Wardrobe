@@ -77,10 +77,13 @@ class _SearchState extends State<Search> {
             ),
             child: Row(
               children: [
-                Icon(
-                  Icons.search_outlined,
-                  color: Colors.white,
-                  size: 40,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.search_outlined,
+                    color: Colors.white,
+                    size: 40,
+                  ),
                 ),
                 Expanded(
                   child: TextField(

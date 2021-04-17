@@ -1,0 +1,37 @@
+__________________________________________
+__________________________________________
+Additional page
+-informative description page
+-checkout page
+-payment gateway
+-proof of a purchase reciept 
+__________________________________________
+1.strive for consistency
+-familiar colors
+-call to actions
+-userflows
+-familiar icon
+2.Enable frequent users to use shortcuts
+3.Offer informative feedback
+-heading of location
+-checkout stage step 1> step 2>done
+-show toasts
+4.Design dialouge to yield closure
+-Thank you message
+5.Offer simple error handling
+-avoid errors
+-step by step instructions to solve problem for unavoidable
+-flag the text fields where the user forgot to provide input
+6.Permit easy reversal of actions
+-logo as a button
+-always available navigation bar
+7.Support internal locus of control
+-behave as expected
+8.Reduce short term memory load
+-present one post at a time
+_____________________________________________
+_____________________________________________
+_________________DONE_______________________
+
+
+

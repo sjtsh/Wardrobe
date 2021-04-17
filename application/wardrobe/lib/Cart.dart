@@ -6,7 +6,10 @@ import './CartList.dart';
 import './CartCheckout.dart';
 
 class Cart extends StatelessWidget {
-  Cart();
+
+  final Function setIndex;
+
+  Cart(this.setIndex);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +40,7 @@ class Cart extends StatelessWidget {
             ),
           ),
         ),
-        CartCheckout(),
+        CartCheckout(setIndex),
       ],
     );
   }

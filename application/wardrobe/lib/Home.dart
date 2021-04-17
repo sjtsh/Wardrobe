@@ -10,19 +10,26 @@ class Home extends StatelessWidget {
     return Column(
       children: [
         HomePreview(),
-        Text(
-          "Skeleton T-shirt",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 40,
-            color: Colors.white,
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Text(
+              "Skeleton T-shirt",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 40,
+                color: Colors.white,
+              ),
+            ),
           ),
         ),
-        Text(
-          "2500/-",
-          style: TextStyle(
-            fontSize: 30,
-            color: Colors.white,
+        Expanded(
+          child: Text(
+            "2500/-",
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.white,
+            ),
           ),
         ),
         HomeCart(),

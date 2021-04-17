@@ -7,6 +7,9 @@ import './Floater.dart';
 import './cart.dart';
 import './Search.dart';
 import './AboutUs.dart';
+import './Checkout.dart';
+import './CheckoutFooter.dart';
+import './Reciept.dart';
 
 void main() {
   runApp(Wardrobe());
@@ -37,17 +40,39 @@ class _WardrobeState extends State<Wardrobe> {
     });
   }
 
+  Widget changeNavigation(int index){
+    if(index==3){
+      return CheckoutFooter(_setIndex);
+    }else if(index==4){
+      return Container();
+    }else{
+      return Navigation(_setIndex);
+    }
+  }
+
+  Widget changeFloater(int index){
+    if(index==3||index==4){
+      return null;
+    }else{
+      return Floater(_setIndex);
+    }
+  }
+
   Widget changeActivity(int index) {
-    if (index == 2) {
-      return Expanded(child: Home());
-    } else if (index == 0) {
-      return Expanded(child: Cart());
+    if (index == 0) {
+      return Expanded(child: Cart(_setIndex));
     } else if (index == 1) {
       return Expanded(child: Search());
+    } else if (index == 2) {
+      return Expanded(child: Home());
+    } else if (index == 3){
+      return Expanded(child: Checkout());
+    } else if (index == 4){
+      return Expanded(child: Reciept(_setIndex));
     } else if(index == 20) {
       return Expanded(child: AboutUs());
     }
-    return Expanded(child: Text("NULL"));
+    return null;
   }
 
   @override
@@ -55,7 +80,7 @@ class _WardrobeState extends State<Wardrobe> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        floatingActionButton: Floater(_setIndex),
+        floatingActionButton: changeFloater(index),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         body: Container(
             decoration: BoxDecoration(
@@ -67,7 +92,7 @@ class _WardrobeState extends State<Wardrobe> {
             child: Column(children: [
               Logo(logo, _setIndex),
               changeActivity(index),
-              Navigation(_setIndex),
+              changeNavigation(index),
             ]),),
       ),
     );

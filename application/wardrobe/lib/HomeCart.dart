@@ -4,7 +4,7 @@ class HomeCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.only(bottom: 30.0, top: 10.0),
       child: ElevatedButton(
         onPressed: () {
           ScaffoldMessenger.of(context)
@@ -16,7 +16,7 @@ class HomeCart extends StatelessWidget {
           onPrimary: Colors.black,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(10.0),
           child: Text(
             "Add to Cart",
             style: TextStyle(
