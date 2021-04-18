@@ -43,7 +43,7 @@ class CheckoutFooter extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: const Text("CONFIRMED")));
+                    .showSnackBar(SnackBar(content: const Text("YOUR PACKAGE IS ON ITS WAY TO YOU")));
                 print("CONFIRMED");
                 setIndex(4);
               },

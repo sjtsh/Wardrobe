@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wardrobe/HomeSlider.dart';
 
 import './Logo.dart';
 import './Navigation.dart';
@@ -24,6 +25,9 @@ class _WardrobeState extends State<Wardrobe> {
   int index = 2;
   AssetImage background = AssetImage("assets/home_background.png");
   Image logo = Image.asset("assets/home_logo.png");
+
+
+
 
   void _setIndex(int nextIndex) {
     setState(() {
@@ -51,7 +55,7 @@ class _WardrobeState extends State<Wardrobe> {
   }
 
   Widget changeFloater(int index){
-    if(index==3||index==4){
+    if(index==3){
       return null;
     }else{
       return Floater(_setIndex);
