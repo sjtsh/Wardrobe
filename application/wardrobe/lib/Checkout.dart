@@ -1,28 +1,25 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import './CheckoutField.dart';
+import './CheckoutSlider.dart';
 
 class Checkout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(25.0),
+        Expanded(
           child: Container(
-            height: 300,
-            width: 300,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(25)),
-              image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage("assets/Product2.png"),
-              )
             ),
+            child: SizedBox(
+                width: 300,
+                height: 300,
+                child: CheckoutSlider()),
           ),
         ),
-        Expanded(child: CheckoutField()),
+        CheckoutField(),
       ],
     );
   }

@@ -6,8 +6,10 @@ import './HomePreview.dart';
 class HomeSlider extends StatelessWidget {
 
   final Function changeHome;
+  final Function changeDetails;
+  final int productIndex;
 
-  HomeSlider(this.changeHome);
+  HomeSlider(this.changeHome, this.changeDetails, this.productIndex);
 
   final List img = const [
     AssetImage("assets/Product1.png"),
@@ -22,12 +24,12 @@ class HomeSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
         items: [
-          HomePreview(img[0]),
-          HomePreview(img[1]),
-          HomePreview(img[2]),
-          HomePreview(img[3]),
-          HomePreview(img[4]),
-          HomePreview(img[5]),
+          HomePreview(img[0], changeDetails, productIndex),
+          HomePreview(img[1], changeDetails, productIndex),
+          HomePreview(img[2], changeDetails, productIndex),
+          HomePreview(img[3], changeDetails, productIndex),
+          HomePreview(img[4], changeDetails, productIndex),
+          HomePreview(img[5], changeDetails, productIndex),
           ],
           options: CarouselOptions(
           height: 400,

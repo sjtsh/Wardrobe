@@ -5,6 +5,9 @@ import './HomeSlider.dart';
 import 'package:carousel_slider/carousel_options.dart';
 
 class Home extends StatefulWidget {
+  final Function changeDetails;
+  Home(this.changeDetails);
+
 
   @override
   _HomeState createState() => _HomeState();
@@ -13,14 +16,14 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   int productIndex = 0;
-  List names = const ["Skeleton T-shirt",  "Woolen Sweater",  "Modern Overcoat", "Skeleton T-shirt",  "Woolen Sweater",  "Modern Overcoat"];
+  List names = const ["Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat", "Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat"];
   List price = const [1000,  2000,  3000,  4000,  5000,  6000];
 
   void changeHome(int number, CarouselPageChangedReason reason){
     setState(() {
       productIndex = number;
     });
-    print("picture changed to " + number.toString() + " because of ");
+    print("Home screen picture changed to " + number.toString() + " because of ");
     print(reason);
   }
 
@@ -29,7 +32,7 @@ class _HomeState extends State<Home> {
     return Column(
         children: [
 
-        HomeSlider(changeHome),
+        HomeSlider(changeHome, widget.changeDetails, productIndex),
 
         // HomeSlider(widget.items, widget.price),
         // HomeSlider(changeHome, widget.items, widget.price),

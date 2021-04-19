@@ -11,6 +11,7 @@ import './AboutUs.dart';
 import './Checkout.dart';
 import './CheckoutFooter.dart';
 import './Reciept.dart';
+import './Description.dart';
 
 void main() {
   runApp(Wardrobe());
@@ -23,11 +24,9 @@ class Wardrobe extends StatefulWidget {
 
 class _WardrobeState extends State<Wardrobe> {
   int index = 2;
+  int productIndex;
   AssetImage background = AssetImage("assets/home_background.png");
   Image logo = Image.asset("assets/home_logo.png");
-
-
-
 
   void _setIndex(int nextIndex) {
     setState(() {
@@ -41,6 +40,15 @@ class _WardrobeState extends State<Wardrobe> {
         logo = Image.asset("assets/home_logo.png");
       }
       print(index);
+    });
+  }
+
+
+  void changeDetails(int productIndex){
+    print("details changed to index " + productIndex.toString());
+    setState(() {
+      this.productIndex = productIndex;
+      index = 5;
     });
   }
 
@@ -68,11 +76,13 @@ class _WardrobeState extends State<Wardrobe> {
     } else if (index == 1) {
       return Expanded(child: Search());
     } else if (index == 2) {
-      return Expanded(child: Home());
+      return Expanded(child: Home(changeDetails));
     } else if (index == 3){
       return Expanded(child: Checkout());
     } else if (index == 4){
       return Expanded(child: Reciept(_setIndex));
+    } else if (index == 5){
+      return Expanded(child: Description(productIndex, _setIndex));
     } else if(index == 20) {
       return Expanded(child: AboutUs());
     }
