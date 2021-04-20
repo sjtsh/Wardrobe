@@ -39,7 +39,7 @@ class HomeSlider extends StatelessWidget {
           enableInfiniteScroll: true,
           reverse: false,
           autoPlay: true,
-          autoPlayInterval: Duration(seconds: 10),
+          autoPlayInterval: Duration(seconds: 5),
           autoPlayAnimationDuration: Duration(milliseconds: 800),
           autoPlayCurve: Curves.fastOutSlowIn,
           enlargeCenterPage: true,

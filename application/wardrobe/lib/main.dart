@@ -12,6 +12,8 @@ import './Checkout.dart';
 import './CheckoutFooter.dart';
 import './Reciept.dart';
 import './Description.dart';
+import './DescriptionFloater.dart';
+import 'LogoBack.dart';
 
 void main() {
   runApp(Wardrobe());
@@ -43,6 +45,11 @@ class _WardrobeState extends State<Wardrobe> {
     });
   }
 
+    void _setBackground(AssetImage image) {
+    setState(() {
+      background = image;
+    });
+  }
 
   void changeDetails(int productIndex){
     print("details changed to index " + productIndex.toString());
@@ -65,11 +72,22 @@ class _WardrobeState extends State<Wardrobe> {
   Widget changeFloater(int index){
     if(index==3){
       return null;
-    }else{
+    }if(index==5){
+      return DescriptionFloater();
+    }
+    else{
       return Floater(_setIndex);
     }
   }
 
+  Widget changeLogo(int index){
+  if(index<3){
+    return Logo(logo, _setIndex);
+  }else{
+    return LogoBack(logo, _setIndex);
+  }
+
+  }
   Widget changeActivity(int index) {
     if (index == 0) {
       return Expanded(child: Cart(_setIndex));
@@ -82,7 +100,7 @@ class _WardrobeState extends State<Wardrobe> {
     } else if (index == 4){
       return Expanded(child: Reciept(_setIndex));
     } else if (index == 5){
-      return Expanded(child: Description(productIndex, _setIndex));
+      return Expanded(child: Description(productIndex, _setIndex, _setBackground));
     } else if(index == 20) {
       return Expanded(child: AboutUs());
     }
@@ -104,7 +122,7 @@ class _WardrobeState extends State<Wardrobe> {
               ),
             ),
             child: Column(children: [
-              Logo(logo, _setIndex),
+              changeLogo(index),
               changeActivity(index),
               changeNavigation(index),
             ]),),
