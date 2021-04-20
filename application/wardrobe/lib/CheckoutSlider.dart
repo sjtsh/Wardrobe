@@ -30,6 +30,7 @@ class _CheckoutSliderState extends State<CheckoutSlider> {
                 options: CarouselOptions(
                 //pageViewKey: ,
                 //scrollPhysics: ,
+                  height: 250,
                   enableInfiniteScroll: false,
                   viewportFraction: 1,
                   initialPage: 0,

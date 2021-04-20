@@ -33,7 +33,6 @@ class HomeSlider extends StatelessWidget {
           ],
           options: CarouselOptions(
           height: 400,
-          aspectRatio: 16 / 9,
           viewportFraction: 0.6,
           initialPage: 0,
           enableInfiniteScroll: true,

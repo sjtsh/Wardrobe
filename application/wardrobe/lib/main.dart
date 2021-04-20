@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wardrobe/HomeSlider.dart';
 
 import './Logo.dart';
 import './Navigation.dart';
@@ -45,7 +44,7 @@ class _WardrobeState extends State<Wardrobe> {
     });
   }
 
-    void _setBackground(AssetImage image) {
+  void _setBackground(AssetImage image) {
     setState(() {
       background = image;
     });

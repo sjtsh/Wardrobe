@@ -6,9 +6,7 @@ import './CartList.dart';
 import './CartCheckout.dart';
 
 class Cart extends StatelessWidget {
-
   final Function setIndex;
-
   Cart(this.setIndex);
 
   @override
@@ -33,7 +31,7 @@ class Cart extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 20.0),
           child: Text(
-            "120,000/-",
+            "35000/-",
             style: TextStyle(
               color: Colors.white,
               fontSize: 30,
