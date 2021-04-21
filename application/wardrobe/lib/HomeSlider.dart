@@ -15,9 +15,9 @@ class HomeSlider extends StatelessWidget {
     AssetImage("assets/Product1.png"),
     AssetImage("assets/Product2.png"),
     AssetImage("assets/Product3.png"),
-    AssetImage("assets/Product1.png"),
-    AssetImage("assets/Product2.png"),
-    AssetImage("assets/Product3.png")
+    AssetImage("assets/Product4.jpg"),
+    AssetImage("assets/Product5.jpg"),
+    AssetImage("assets/Product6.jpg")
   ];
 
   @override

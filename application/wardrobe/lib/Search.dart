@@ -9,9 +9,12 @@ class Search extends StatefulWidget {
 
 class _SearchState extends State<Search> {
   final products = [
-    {"image": AssetImage("assets/Product2.png"), "name": "Skeleton", "price": 2500},
-    {"image": AssetImage("assets/Product1.png"), "name": "Sweater", "price": 5000},
-    {"image": AssetImage("assets/Product3.png"), "name": "Overcoat", "price": 8000},
+    {"image": AssetImage("assets/Product1.png"), "name": "sweater", "price": 3600},
+    {"image": AssetImage("assets/Product2.png"), "name": "skeleton", "price": 2500},
+    {"image": AssetImage("assets/Product3.png"), "name": "overcoat", "price": 8000},
+    {"image": AssetImage("assets/Product4.jpg"), "name": "hat", "price": 1200},
+    {"image": AssetImage("assets/Product5.jpg"), "name": "skirt", "price": 4000},
+    {"image": AssetImage("assets/Product6.jpg"), "name": "jacket", "price": 6000},
   ];
 
   Widget searchResult = Container();
@@ -20,7 +23,7 @@ class _SearchState extends State<Search> {
     bool found = false;
     setState(() {
       print("function engaged");
-      for (int i = 0; i < 3; i++) {
+      for (int i = 0; i < 6; i++) {
         if (products[i]["name"] == text) {
           print("search results found");
           searchResult = Product(

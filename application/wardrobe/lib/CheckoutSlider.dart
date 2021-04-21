@@ -13,6 +13,9 @@ class _CheckoutSliderState extends State<CheckoutSlider> {
     AssetImage("assets/Product1.png"),
     AssetImage("assets/Product2.png"),
     AssetImage("assets/Product3.png"),
+    AssetImage("assets/Product4.jpg"),
+    AssetImage("assets/Product5.jpg"),
+    AssetImage("assets/Product6.jpg"),
   ];
 
   @override
@@ -26,6 +29,9 @@ class _CheckoutSliderState extends State<CheckoutSlider> {
                 CheckoutPreview(img[0]),
                 CheckoutPreview(img[1]),
                 CheckoutPreview(img[2]),
+                CheckoutPreview(img[3]),
+                CheckoutPreview(img[4]),
+                CheckoutPreview(img[5]),
               ],
                 options: CarouselOptions(
                 //pageViewKey: ,

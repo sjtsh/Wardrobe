@@ -14,9 +14,16 @@ class Checkout extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(25)),
             ),
             child: SizedBox(
-                width: 300,
-                height: 300,
+                width: 250,
+                height: 200,
                 child: CheckoutSlider()),
+          ),
+        ),
+        Text(
+          "25,300/-",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 30,
           ),
         ),
         CheckoutField(),

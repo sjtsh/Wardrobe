@@ -31,7 +31,7 @@ class Cart extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 20.0),
           child: Text(
-            "35000/-",
+            "25,300/-",
             style: TextStyle(
               color: Colors.white,
               fontSize: 30,

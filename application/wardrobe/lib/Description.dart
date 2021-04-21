@@ -12,12 +12,12 @@ class Description extends StatelessWidget {
     AssetImage("assets/Product1.png"),
     AssetImage("assets/Product2.png"),
     AssetImage("assets/Product3.png"),
-    AssetImage("assets/Product1.png"),
-    AssetImage("assets/Product2.png"),
-    AssetImage("assets/Product3.png")
+    AssetImage("assets/Product4.jpg"),
+    AssetImage("assets/Product5.jpg"),
+    AssetImage("assets/Product6.jpg")
   ];
-  List names = const ["Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat", "Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat"];
-  List price = const [1000,  2000,  3000,  4000,  5000,  6000];
+  List names = const ["Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat", "Black Hat",  "Cream Skirt",  "Denim Jacket"];
+  List price = const [3600,  2500,  8000,  1200,  4000,  6000];
 
   @override
   Widget build(BuildContext context) {

@@ -16,8 +16,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   int productIndex = 0;
-  List names = const ["Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat", "Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat"];
-  List price = const [1000,  2000,  3000,  4000,  5000,  6000];
+  List names = const ["Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat", "Black Hat",  "Cream Skirt",  "Denim Jacket"];
+  List price = const [3600,  2500,  8000,  1200,  4000,  6000];
 
   void changeHome(int number, CarouselPageChangedReason reason){
     setState(() {
