@@ -12,9 +12,9 @@ class HomeSlider extends StatelessWidget {
   HomeSlider(this.changeHome, this.changeDetails, this.productIndex);
 
   final List img = const [
-    AssetImage("assets/Product1.png"),
-    AssetImage("assets/Product2.png"),
-    AssetImage("assets/Product3.png"),
+    AssetImage("assets/Product1.jpg"),
+    AssetImage("assets/Product2.jpg"),
+    AssetImage("assets/Product3.jpg"),
     AssetImage("assets/Product4.jpg"),
     AssetImage("assets/Product5.jpg"),
     AssetImage("assets/Product6.jpg")
@@ -22,6 +22,7 @@ class HomeSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return CarouselSlider(
         items: [
           HomePreview(img[0], changeDetails, productIndex),

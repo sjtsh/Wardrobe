@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wardrobe/CheckoutField.dart';
 
+import 'RecieptField.dart';
+
 class Reciept extends StatelessWidget {
   final Function setIndex;
 
@@ -14,12 +16,12 @@ class Reciept extends StatelessWidget {
           padding: const EdgeInsets.all(25.0),
           child: Text("PAYMENT SUCCESSFUL TO",
           textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.white,
+            style: TextStyle(color: Color(0xFF9CC3FF),
                     fontSize: 40,
                     fontWeight: FontWeight.bold),
           ),
         ),
-        CheckoutField(),
+        RecieptField(),
         Expanded(child: Padding(
           padding: const EdgeInsets.only(bottom: 100.0),
           child: Container(

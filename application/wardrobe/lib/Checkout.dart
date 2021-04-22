@@ -19,11 +19,14 @@ class Checkout extends StatelessWidget {
                 child: CheckoutSlider()),
           ),
         ),
-        Text(
-          "25,300/-",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
+        Padding(
+          padding: const EdgeInsets.only(bottom:8.0),
+          child: Text(
+            "25,300/-",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+            ),
           ),
         ),
         CheckoutField(),

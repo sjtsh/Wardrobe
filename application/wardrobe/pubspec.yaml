@@ -24,10 +24,10 @@ dependencies:
   persistent_bottom_nav_bar: any
   flutter:
     sdk: flutter
+  flutter_advanced_networkimage: ^0.7.0
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+# The following adds the Cupertino Icons font to your application.
+# Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -46,9 +46,12 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/Product1.png
-    - assets/Product2.png
-    - assets/Product3.png
+    - assets/Product1.jpg
+    - assets/Product2.jpg
+    - assets/Product3.jpg
+    - assets/Product4.jpg
+    - assets/Product5.jpg
+    - assets/Product6.jpg
     - assets/
 
   # To add assets to your application, add an assets section, like this:

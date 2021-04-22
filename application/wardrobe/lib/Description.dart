@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:wardrobe/main.dart';
 
 import 'DescriptionList.dart';
+import 'main.dart';
 
 class Description extends StatelessWidget {
   final int productIndex;
@@ -9,15 +11,16 @@ class Description extends StatelessWidget {
   Description(this.productIndex, this.setIndex, this.setBackground);
 
   final List img = const [
-    AssetImage("assets/Product1.png"),
-    AssetImage("assets/Product2.png"),
-    AssetImage("assets/Product3.png"),
+    AssetImage("assets/Product1.jpg"),
+    AssetImage("assets/Product2.jpg"),
+    AssetImage("assets/Product3.jpg"),
     AssetImage("assets/Product4.jpg"),
     AssetImage("assets/Product5.jpg"),
     AssetImage("assets/Product6.jpg")
   ];
   List names = const ["Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat", "Black Hat",  "Cream Skirt",  "Denim Jacket"];
   List price = const [3600,  2500,  8000,  1200,  4000,  6000];
+
 
   @override
   Widget build(BuildContext context) {

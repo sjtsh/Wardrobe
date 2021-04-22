@@ -9,9 +9,9 @@ class Search extends StatefulWidget {
 
 class _SearchState extends State<Search> {
   final products = [
-    {"image": AssetImage("assets/Product1.png"), "name": "sweater", "price": 3600},
-    {"image": AssetImage("assets/Product2.png"), "name": "skeleton", "price": 2500},
-    {"image": AssetImage("assets/Product3.png"), "name": "overcoat", "price": 8000},
+    {"image": AssetImage("assets/Product1.jpg"), "name": "sweater", "price": 3600},
+    {"image": AssetImage("assets/Product2.jpg"), "name": "skeleton", "price": 2500},
+    {"image": AssetImage("assets/Product3.jpg"), "name": "overcoat", "price": 8000},
     {"image": AssetImage("assets/Product4.jpg"), "name": "hat", "price": 1200},
     {"image": AssetImage("assets/Product5.jpg"), "name": "skirt", "price": 4000},
     {"image": AssetImage("assets/Product6.jpg"), "name": "jacket", "price": 6000},

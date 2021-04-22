@@ -9,22 +9,27 @@ class CartCheckout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 30.0, top: 10.0),
-      child: ElevatedButton(
-        onPressed: () {
-          setIndex(index);
-        },
-        style: ElevatedButton.styleFrom(
-          primary: Color(0x80ECF0F3).withOpacity(0.8),
-          onPrimary: Colors.black,
+      child: Container(
+          decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(25)),
+          color: Color(0xFF9CC3FF),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Text(
-            "CHECKOUT",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 30,
-              color: Colors.black,
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
+          child: TextButton(
+            onPressed: () {
+              setIndex(index);
+            },
+            style: ElevatedButton.styleFrom(
+              primary: Color(0xFF9CC3FF).withOpacity(0.8),
+              onPrimary: Colors.black,
+            ),
+            child: Text(
+              "CHECKOUT",
+              style: TextStyle(
+                fontSize: 30,
+                color: Colors.black,
+              ),
             ),
           ),
         ),

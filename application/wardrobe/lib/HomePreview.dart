@@ -17,6 +17,7 @@ class HomePreview extends StatelessWidget {
                   width: 250,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white, width: 1),
                       image: DecorationImage(
                           fit: BoxFit.cover,
                           image: img),

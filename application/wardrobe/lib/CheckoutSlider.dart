@@ -10,9 +10,9 @@ class CheckoutSlider extends StatefulWidget {
 class _CheckoutSliderState extends State<CheckoutSlider> {
   int pos = 0;
   final List img = const [
-    AssetImage("assets/Product1.png"),
-    AssetImage("assets/Product2.png"),
-    AssetImage("assets/Product3.png"),
+    AssetImage("assets/Product1.jpg"),
+    AssetImage("assets/Product2.jpg"),
+    AssetImage("assets/Product3.jpg"),
     AssetImage("assets/Product4.jpg"),
     AssetImage("assets/Product5.jpg"),
     AssetImage("assets/Product6.jpg"),

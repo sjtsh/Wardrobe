@@ -29,6 +29,12 @@ class _WardrobeState extends State<Wardrobe> {
   AssetImage background = AssetImage("assets/home_background.png");
   Image logo = Image.asset("assets/home_logo.png");
 
+  Future<bool> _onBackPressed() {
+    print("Back Pressed");
+    _setIndex(2);
+    return null;
+  }
+
   void _setIndex(int nextIndex) {
     setState(() {
       index = nextIndex;
@@ -85,8 +91,8 @@ class _WardrobeState extends State<Wardrobe> {
   }else{
     return LogoBack(logo, _setIndex);
   }
-
   }
+
   Widget changeActivity(int index) {
     if (index == 0) {
       return Expanded(child: Cart(_setIndex));
@@ -105,26 +111,58 @@ class _WardrobeState extends State<Wardrobe> {
     }
     return null;
   }
+//
+//   Future loadData() async{
+//     setState((){
+//       loading = true;
+//     });
+//
+//   await
+//
+//   Future.delayed
+//
+//   (
+//
+//   Duration
+//
+//   (
+//
+//   seconds
+//
+//       :4), (){
+//   setState
+//   })
+// }
+
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage("assets/Product1.png"), context);
+    precacheImage(AssetImage("assets/Product2.png"), context);
+    precacheImage(AssetImage("assets/Product3.png"), context);
+    precacheImage(AssetImage("assets/Product4.png"), context);
+    precacheImage(AssetImage("assets/Product5.png"), context);
+    precacheImage(AssetImage("assets/Product6.png"), context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        floatingActionButton: changeFloater(index),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-        body: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: background,
-                fit: BoxFit.cover,
+      home: WillPopScope(
+        onWillPop: _onBackPressed,
+        child: Scaffold(
+          floatingActionButton: changeFloater(index),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+          body: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: background,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            child: Column(children: [
-              changeLogo(index),
-              changeActivity(index),
-              changeNavigation(index),
-            ]),),
+              child: Column(children: [
+                changeLogo(index),
+                changeActivity(index),
+                changeNavigation(index),
+              ]),),
+        ),
       ),
     );
   }
