@@ -17,7 +17,7 @@ class AboutUs extends StatelessWidget {
                   fontStyle: FontStyle.italic),
             ),
           ),
-          Text("Contact Us at NP03A190211@heraldcollege.edu.np",
+          Text("Contact Me at NP03A190211@heraldcollege.edu.np",
               textAlign: TextAlign.center,
               style: TextStyle(
               color: Colors.white,

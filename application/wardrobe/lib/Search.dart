@@ -22,33 +22,17 @@ class _SearchState extends State<Search> {
   void changeSearchResults(String text) {
     bool found = false;
     setState(() {
-      print("function engaged");
       for (int i = 0; i < 6; i++) {
         if (products[i]["name"] == text) {
-          print("search results found");
           searchResult = Product(
               products[i]["image"], products[i]["name"], products[i]["price"]);
           found = true;
           break;
         }
       }
-        if(!found){
-          print("search results not found");
-          searchResult = Center(
-            child: Text(
-              "NO RESULTS",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                ),
-              ),
-            );
-          }
-      }
+    }
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return Column(

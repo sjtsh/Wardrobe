@@ -52,13 +52,13 @@ class _CheckoutFieldState extends State<CheckoutField> {
                       Expanded(
                         child: TextField(
                           decoration: InputDecoration(
-                            labelText: 'eg: sajat shrestha',
+                            hintText: 'eg: sajat shrestha',
                             errorText: CheckoutField.validate1 ? 'Name Can\'t Be Empty' : null,
                           ),
                           controller: CheckoutField.controllerName,
                           keyboardAppearance: Brightness.dark,
                           style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 20,
                             color: Colors.white,
                           ),),
                       ),
@@ -91,13 +91,13 @@ class _CheckoutFieldState extends State<CheckoutField> {
                   Expanded(
                     child: TextField(
                       decoration: InputDecoration(
-                        labelText: 'eg: Naxal',
+                        hintText: 'eg: Naxal',
                         errorText: CheckoutField.validate2 ? 'Address Can\'t Be Empty' : null,
                       ),
                       controller: CheckoutField.controllerAddress,
                       keyboardAppearance: Brightness.dark,
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 20,
                         color: Colors.white,
                       ),),
                   ),
@@ -132,13 +132,13 @@ class _CheckoutFieldState extends State<CheckoutField> {
                       padding: const EdgeInsets.all(8.0),
                       child: TextField(
                         decoration: InputDecoration(
-                          labelText: 'eg: 9808173521',
+                          hintText: 'eg: 9808173521',
                           errorText: CheckoutField.validate3 ? 'Tel Can\'t Be Empty' : null,
                         ),
                         controller: CheckoutField.controllerTel,
                         keyboardAppearance: Brightness.dark,
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 20,
                           color: Colors.white,
                         ),),
                     ),

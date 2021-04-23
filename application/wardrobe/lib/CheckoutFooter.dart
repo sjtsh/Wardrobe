@@ -58,7 +58,7 @@ class CheckoutFooter extends StatelessWidget {
                   padding: const EdgeInsets.all(5.0),
                   child: TextButton(
                     onPressed: () {
-                      bool v = false;
+                      bool v = true;
                       print("CONFIRMED");
                       if(CheckoutField.controllerName.text.isEmpty){
                         CheckoutField.validate1 = true;

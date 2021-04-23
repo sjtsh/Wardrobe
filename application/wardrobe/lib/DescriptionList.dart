@@ -15,7 +15,7 @@ class DescriptionList extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(25)),
           border: Border.all(color: Colors.white, width: 2),
-          color: Color(0x599CC3FF),
+          color: Color(0x599CABC2),
         ),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
