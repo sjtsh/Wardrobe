@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
-import 'package:app_settings/app_settings.dart';
 import 'package:invert_colors/invert_colors.dart';
 
 import './Logo.dart';
@@ -39,6 +37,13 @@ class WardrobeState extends State<Wardrobe> {
 
   //_________________________Methods__________________________________
 
+  /// Did Change Dependencies
+  @override
+  void didChangeDependencies() {
+    precacheImage(background, context);
+    precacheImage(logo.image, context);
+    super.didChangeDependencies();
+  }
 
   Future<bool> _onBackPressed() {
     print("Back Pressed");
@@ -156,6 +161,7 @@ class WardrobeState extends State<Wardrobe> {
       );
     } else {
       return MaterialApp(
+        theme: ThemeData(fontFamily: 'Karla'),
         debugShowCheckedModeBanner: false,
         home: WillPopScope(
           onWillPop: _onBackPressed,

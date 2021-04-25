@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wardrobe/Logo.dart';
 
 class LogoBack extends StatelessWidget {
   final Image logo;
@@ -23,19 +22,25 @@ class LogoBack extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 30.0, right: 70.0,),
-                child: Icon(
-                  Icons.arrow_back_ios_outlined,
-                  color: Colors.white,
-                  size: 40,
+              child: Semantics(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 30.0, right: 70.0,),
+                  child: Icon(
+                    Icons.arrow_back_ios_outlined,
+                    color: Colors.white,
+                    size: 40,
+                  ),
                 ),
+                label: "Go to Home",
               ),
             ),
-            Container(
-                margin: EdgeInsets.only(top: 30),
-                width: 76.43,
-                child: logo),
+            Semantics(
+              child: Container(
+                  margin: EdgeInsets.only(top: 30),
+                  width: 76.43,
+                  child: logo),
+                  label: "Image of logo",
+            ),
             Expanded(
               child: Container(
                 width: 50,

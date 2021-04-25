@@ -20,13 +20,11 @@ class _SearchState extends State<Search> {
   Widget searchResult = Container();
 
   void changeSearchResults(String text) {
-    bool found = false;
     setState(() {
       for (int i = 0; i < 6; i++) {
         if (products[i]["name"] == text) {
           searchResult = Product(
               products[i]["image"], products[i]["name"], products[i]["price"]);
-          found = true;
           break;
         }
       }
@@ -73,20 +71,23 @@ class _SearchState extends State<Search> {
                   ),
                 ),
                 Expanded(
-                  child: TextField(
-                    onChanged: (String text) {
-                      print(text);
-                      changeSearchResults(text);
-                    },
-                    enableSuggestions: true,
-                    minLines: null,
-                    maxLines: null,
-                    keyboardAppearance: Brightness.dark,
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.white,
-                      backgroundColor: Colors.black,
+                  child: Semantics(
+                    child: TextField(
+                      onChanged: (String text) {
+                        print(text);
+                        changeSearchResults(text);
+                      },
+                      enableSuggestions: true,
+                      minLines: null,
+                      maxLines: null,
+                      keyboardAppearance: Brightness.dark,
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.white,
+                        backgroundColor: Colors.black,
+                      ),
                     ),
+                    label: "Type what to search for",
                   ),
                 ),
               ],

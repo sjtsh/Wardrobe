@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wardrobe/main.dart';
 
 import 'DescriptionList.dart';
-import 'main.dart';
 
 class Description extends StatelessWidget {
   final int productIndex;
@@ -18,8 +16,8 @@ class Description extends StatelessWidget {
     AssetImage("assets/Product5.jpg"),
     AssetImage("assets/Product6.jpg")
   ];
-  List names = const ["Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat", "Black Hat",  "Cream Skirt",  "Denim Jacket"];
-  List price = const [3600,  2500,  8000,  1200,  4000,  6000];
+  final List names = const ["Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat", "Black Hat",  "Cream Skirt",  "Denim Jacket"];
+  final List price = const [3600,  2500,  8000,  1200,  4000,  6000];
 
 
   @override

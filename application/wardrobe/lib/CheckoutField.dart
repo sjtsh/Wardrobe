@@ -50,17 +50,20 @@ class _CheckoutFieldState extends State<CheckoutField> {
                               ),
                             ),
                       Expanded(
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: 'eg: sajat shrestha',
-                            errorText: CheckoutField.validate1 ? 'Name Can\'t Be Empty' : null,
-                          ),
-                          controller: CheckoutField.controllerName,
-                          keyboardAppearance: Brightness.dark,
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          ),),
+                        child: Semantics(
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'eg: sajat shrestha',
+                              errorText: CheckoutField.validate1 ? 'Name Can\'t Be Empty' : null,
+                            ),
+                            controller: CheckoutField.controllerName,
+                            keyboardAppearance: Brightness.dark,
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                            ),),
+                            label: "Enter your name here",
+                        ),
                       ),
                 ],
                 ),
@@ -89,17 +92,20 @@ class _CheckoutFieldState extends State<CheckoutField> {
                     ),
                   ),
                   Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'eg: Naxal',
-                        errorText: CheckoutField.validate2 ? 'Address Can\'t Be Empty' : null,
-                      ),
-                      controller: CheckoutField.controllerAddress,
-                      keyboardAppearance: Brightness.dark,
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),),
+                    child: Semantics(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'eg: Naxal',
+                          errorText: CheckoutField.validate2 ? 'Address Can\'t Be Empty' : null,
+                        ),
+                        controller: CheckoutField.controllerAddress,
+                        keyboardAppearance: Brightness.dark,
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),),
+                        label: "Enter your Address here",
+                    ),
                   ),
                 ],),
               ),
@@ -130,17 +136,20 @@ class _CheckoutFieldState extends State<CheckoutField> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'eg: 9808173521',
-                          errorText: CheckoutField.validate3 ? 'Tel Can\'t Be Empty' : null,
-                        ),
-                        controller: CheckoutField.controllerTel,
-                        keyboardAppearance: Brightness.dark,
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                        ),),
+                      child: Semantics(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'eg: 9808173521',
+                            errorText: CheckoutField.validate3 ? 'Tel Can\'t Be Empty' : null,
+                          ),
+                          controller: CheckoutField.controllerTel,
+                          keyboardAppearance: Brightness.dark,
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),),
+                          label: "Enter your telephone number here",
+                      ),
                     ),
                   ),
                 ],),

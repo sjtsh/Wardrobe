@@ -25,12 +25,18 @@ class HomeSlider extends StatelessWidget {
 
     return CarouselSlider(
         items: [
-          HomePreview(img[0], changeDetails, productIndex),
-          HomePreview(img[1], changeDetails, productIndex),
-          HomePreview(img[2], changeDetails, productIndex),
-          HomePreview(img[3], changeDetails, productIndex),
-          HomePreview(img[4], changeDetails, productIndex),
-          HomePreview(img[5], changeDetails, productIndex),
+          Semantics(child: HomePreview(img[0], changeDetails, productIndex),
+          label: "Image of Woolen Sweater",),
+          Semantics(child: HomePreview(img[1], changeDetails, productIndex),
+          label: "Image of Skeleton T-shirt",),
+          Semantics(child: HomePreview(img[2], changeDetails, productIndex),
+          label: "Image of Modern Overcoat",),
+          Semantics(child: HomePreview(img[3], changeDetails, productIndex),
+          label: "Image of Black Hat"),
+          Semantics(child: HomePreview(img[4], changeDetails, productIndex),
+          label: "Image of Cream Skirt"),
+          Semantics(child: HomePreview(img[5], changeDetails, productIndex),
+          label: "Image of Denim Jacket",),
           ],
           options: CarouselOptions(
           height: 400,

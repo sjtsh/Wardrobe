@@ -13,31 +13,37 @@ class Logo extends StatelessWidget {
     return Row(
       children: [
         Expanded(child: Container()),
-        TextButton(
-          onPressed: (){
-            setIndex(index);
-          },
-          onLongPress: (){
-            setIndex(index2);
-          },
-          child: Align(
-            alignment: Alignment.topCenter,
-            child: Container(
-              margin: EdgeInsets.only(top: 30),
-              width: 76.43,
-              child: image,
+        Semantics(
+          child: TextButton(
+            onPressed: (){
+              setIndex(index);
+            },
+            onLongPress: (){
+              setIndex(index2);
+            },
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                margin: EdgeInsets.only(top: 30),
+                width: 76.43,
+                child: image,
+              ),
             ),
           ),
+          label: "Go to home screen",
         ),
         Expanded(child: Padding(
           padding: const EdgeInsets.only(top: 30.0, left: 70.0),
-          child: TextButton(
-            child: Icon(
-              Icons.accessibility_new_outlined,
-              color: realIndex==2 ? Colors.white : Colors.black,
-              size: 40,
+          child: Semantics(
+            child: TextButton(
+              child: Icon(
+                Icons.accessibility_new_outlined,
+                color: realIndex==2 ? Colors.white : Colors.black,
+                size: 40,
+              ),
+              onPressed: (){setIndex(6);},
             ),
-            onPressed: (){setIndex(6);},
+            label: "Accessibility Options",
           ),
         )),
       ],

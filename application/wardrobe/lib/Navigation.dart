@@ -30,17 +30,20 @@ class Navigation extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(top: 5.0, bottom: 5.0, right: 40.0),
-                child: Container(
-                decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(15)),
-                border: Border.all(color: Colors.black, width: 3),),
-                  child: Padding(
-                    padding: const EdgeInsets.all(3),
-                    child: Icon(
-                      Icons.shopping_cart_outlined,
-                      color: Colors.black,
+                child: Semantics(
+                  child: Container(
+                  decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  border: Border.all(color: Colors.black, width: 3),),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3),
+                      child: Icon(
+                        Icons.shopping_cart_outlined,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
+                  label: "Go to Cart",
                 ),
               ),
               label: "",
@@ -48,17 +51,20 @@ class Navigation extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Padding(
                 padding: const EdgeInsets.only(top: 5.0, bottom: 5.0, left: 40.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
-                    border: Border.all(color: Colors.black, width: 3),),
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Icon(
-                      Icons.search_sharp,
-                      color: Colors.black,
+                child: Semantics(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                      border: Border.all(color: Colors.black, width: 3),),
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Icon(
+                        Icons.search_sharp,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
+                  label: "Go to Search",
                 ),
               ),
               label: "",

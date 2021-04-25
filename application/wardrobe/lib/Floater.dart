@@ -15,21 +15,24 @@ class Floater extends StatelessWidget {
       border: Border.all(color: Colors.white,width: 2),
       borderRadius: BorderRadius.all(Radius.circular(20),
       ),),
-        child: FloatingActionButton(
-          backgroundColor: Colors.black,
-          splashColor: Color(0x80ECF0F3).withOpacity(0.8),
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Icon(
-              Icons.home_outlined,
-              color: Colors.white,
-              size: 30,
+        child: Semantics(
+          child: FloatingActionButton(
+            backgroundColor: Colors.black,
+            splashColor: Color(0x80ECF0F3).withOpacity(0.8),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Icon(
+                Icons.home_outlined,
+                color: Colors.white,
+                size: 30,
+              ),
             ),
+            onPressed: () {
+              setIndex(index);
+            },
+            elevation: 10.0,
           ),
-          onPressed: () {
-            setIndex(index);
-          },
-          elevation: 10.0,
+          label: "Go to Home",
         ),
       ),
     );
