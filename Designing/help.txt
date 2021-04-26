@@ -1,0 +1,32 @@
+Screen Readers
+______________
+
+Text to Speech output
+___________________
+
+
+Font Size
+________
+
+Accessibility > Font size
+
+You can increase the font size by going to your device's settings
+
+Magnification
+____________
+
+Accessibility>Magnification>Magnification shortcut
+
+
+If you haven't already first turn on the magnification shortcut which lies in your device's settings. This allows you to zoom in on any screen by clicking on the accessibility icon on the bottom right. You can move around the screen by dragging the 2 fingers or adjust zoom by pinching the 2 fingers. Use the icon to stop the magnification.
+
+Color correction
+_____________
+
+
+Color Inversion
+_____________
+
+
+High Contrast text
+_______________

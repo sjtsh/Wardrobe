@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'CheckoutPreview.dart';
+import 'main.dart';
 
 class CheckoutSlider extends StatefulWidget {
   @override
@@ -8,15 +9,8 @@ class CheckoutSlider extends StatefulWidget {
 }
 
 class _CheckoutSliderState extends State<CheckoutSlider> {
+
   int pos = 0;
-  final List img = const [
-    AssetImage("assets/Product1.jpg"),
-    AssetImage("assets/Product2.jpg"),
-    AssetImage("assets/Product3.jpg"),
-    AssetImage("assets/Product4.jpg"),
-    AssetImage("assets/Product5.jpg"),
-    AssetImage("assets/Product6.jpg"),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +20,12 @@ class _CheckoutSliderState extends State<CheckoutSlider> {
           Expanded(child: Container()),
           CarouselSlider(
                 items:[
-                CheckoutPreview(img[0]),
-                CheckoutPreview(img[1]),
-                CheckoutPreview(img[2]),
-                CheckoutPreview(img[3]),
-                CheckoutPreview(img[4]),
-                CheckoutPreview(img[5]),
+                CheckoutPreview(Wardrobe.img[0]),
+                CheckoutPreview(Wardrobe.img[1]),
+                CheckoutPreview(Wardrobe.img[2]),
+                CheckoutPreview(Wardrobe.img[3]),
+                CheckoutPreview(Wardrobe.img[4]),
+                CheckoutPreview(Wardrobe.img[5]),
               ],
                 options: CarouselOptions(
                 //pageViewKey: ,
@@ -50,8 +44,8 @@ class _CheckoutSliderState extends State<CheckoutSlider> {
             ),
               Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: img.map((url){
-              int index = img.indexOf(url);
+              children: Wardrobe.img.map((url){
+              int index = Wardrobe.img.indexOf(url);
                 return Container(
                 width: 8.0,
                 height: 8.0,

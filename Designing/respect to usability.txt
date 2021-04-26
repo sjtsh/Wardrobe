@@ -1,10 +1,7 @@
-__________________________________________
-__________________________________________
 Additional page
--informative description page
--checkout page
--payment gateway
--proof of a purchase reciept 
+-grid mode
+______________________________________________
+Semantics
 __________________________________________
 1.strive for consistency
 -familiar colors
@@ -19,6 +16,7 @@ __________________________________________
 4.Design dialouge to yield closure
 -Thank you message
 5.Offer simple error handling
+-back button doesnt take u straight out
 -avoid errors
 -step by step instructions to solve problem for unavoidable
 -flag the text fields where the user forgot to provide input
@@ -31,7 +29,29 @@ __________________________________________
 -present one post at a time
 _____________________________________________
 _____________________________________________
-_________________DONE_______________________
+BUGS
+- back button directly quits you from the app
+- when you click enter in search doesnt show results
+- remove from cart does not work
+- search should have a add to cart when not remove from cart
+- Remove underline below text in the checkout and the search button
+- Incorrect use of parent widget in the home preview
+- keyboard should lift the screen up
 
+BACKEND REQUIRED
+- add to cart should add the product to the list
+- remove from cart should remove from the list
+- the submit button in the checkout should be connected to the reciept
+- total should be the addition of all the price in the cart
+- List should be presented while searching for two products with same name
+- checkout data to be captured and displayed in the reciept
 
+FUTURE  REQUIREMENTS 
+- Add the data base
+- Cookies to make the name phone number remain in textbox
+- Current status of the delivery
+____________________________________________________
 
+_____________________DONE__________________________
+
+____________________________________________________

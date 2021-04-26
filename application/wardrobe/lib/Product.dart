@@ -39,17 +39,17 @@ class Product extends StatelessWidget {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
-            Semantics(
-              child: TextButton(
-                onPressed: () {
-                  print("pressed");
-                },
+            TextButton(
+              onPressed: () {
+                print("pressed");
+              },
+              child: Semantics(
+                label: "Remove from cart",
                 child: Text(
                   "-",
                   style: TextStyle(color: Colors.white, fontSize: 40),
                 ),
               ),
-              label: "Remove from cart",
             ),
           ],
         ),

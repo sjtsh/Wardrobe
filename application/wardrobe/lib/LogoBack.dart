@@ -39,7 +39,7 @@ class LogoBack extends StatelessWidget {
                   margin: EdgeInsets.only(top: 30),
                   width: 76.43,
                   child: logo),
-                  label: "Image of logo",
+                  label: "Wardrobe logo",
             ),
             Expanded(
               child: Container(

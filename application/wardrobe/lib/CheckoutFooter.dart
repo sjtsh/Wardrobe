@@ -1,7 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:wardrobe/CheckoutField.dart';
 
+
+// import 'package:esewa_pnp/esewa.dart';
+// import 'package:esewa_pnp/esewa_pnp.dart';
+
+
 class CheckoutFooter extends StatelessWidget {
+
+  // final ESewaConfiguration _configuration = ESewaConfiguration(
+  //     clientID: "JB0BBQ4aD0UqIThFJwAKBgAXEUkEGQUBBAwdOgABHD4DChwUAB0R",
+  //     secretKey: "BhwIWQQADhIYSxILExMcAgFXFhcOBwAKBgAXEQ==",
+  //     environment: ESewaConfiguration.ENVIRONMENT_TEST
+  // );
+  //
+  // ESewaPayment _payment = ESewaPayment(
+  //     amount: 600,
+  //     productName: "ProductName",
+  //     productID: "ProductID",
+  //     callBackURL: "https://callbackurl.com"
+  // );
 
   final Function setIndex;
 
@@ -80,6 +98,14 @@ class CheckoutFooter extends StatelessWidget {
                             .showSnackBar(SnackBar(content: const Text("YOUR PACKAGE IS ON ITS WAY TO YOU")));
                         setIndex(4);
                       }
+                      //
+                      // try {
+                      //   final _res = ESewaPnp(configuration: _configuration).initPayment(payment: _payment);
+                      //   // Handle success
+                      // } on ESewaPaymentException catch(e) {
+                      //   // Handle error
+                      // }
+
                     },
                     style: ElevatedButton.styleFrom(
                       primary: Color(0xFF9CC3FF),

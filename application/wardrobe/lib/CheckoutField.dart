@@ -20,7 +20,7 @@ class _CheckoutFieldState extends State<CheckoutField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250,
+      height: 260,
       width: 350,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(25)),

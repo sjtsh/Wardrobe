@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './Product.dart';
+import 'main.dart';
 
 class Search extends StatefulWidget {
   @override
@@ -8,23 +9,15 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-  final products = [
-    {"image": AssetImage("assets/Product1.jpg"), "name": "sweater", "price": 3600},
-    {"image": AssetImage("assets/Product2.jpg"), "name": "skeleton", "price": 2500},
-    {"image": AssetImage("assets/Product3.jpg"), "name": "overcoat", "price": 8000},
-    {"image": AssetImage("assets/Product4.jpg"), "name": "hat", "price": 1200},
-    {"image": AssetImage("assets/Product5.jpg"), "name": "skirt", "price": 4000},
-    {"image": AssetImage("assets/Product6.jpg"), "name": "jacket", "price": 6000},
-  ];
 
   Widget searchResult = Container();
 
   void changeSearchResults(String text) {
     setState(() {
       for (int i = 0; i < 6; i++) {
-        if (products[i]["name"] == text) {
+        if (Wardrobe.names[i] == text) {
           searchResult = Product(
-              products[i]["image"], products[i]["name"], products[i]["price"]);
+              Wardrobe.img[i], Wardrobe.names[i], Wardrobe.price[i]);
           break;
         }
       }

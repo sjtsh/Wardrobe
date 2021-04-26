@@ -23,6 +23,16 @@ void main() {
 class Wardrobe extends StatefulWidget {
   @override
   WardrobeState createState() => WardrobeState();
+  static List img = const [
+  AssetImage("assets/Product1.jpg"),
+  AssetImage("assets/Product2.jpg"),
+  AssetImage("assets/Product3.jpg"),
+  AssetImage("assets/Product4.jpg"),
+  AssetImage("assets/Product5.jpg"),
+  AssetImage("assets/Product6.jpg")
+  ];
+  static List price = const [3600,  2500,  8000,  1200,  4000,  6000];
+  static List names = const ["Woolen Sweater",  "Skeleton T-shirt",  "Modern Overcoat", "Black Hat",  "Cream Skirt",  "Denim Jacket"];
 }
 
 class WardrobeState extends State<Wardrobe> {
@@ -40,6 +50,12 @@ class WardrobeState extends State<Wardrobe> {
   /// Did Change Dependencies
   @override
   void didChangeDependencies() {
+    precacheImage(Wardrobe.img[0], context);
+    precacheImage(Wardrobe.img[1], context);
+    precacheImage(Wardrobe.img[2], context);
+    precacheImage(Wardrobe.img[3], context);
+    precacheImage(Wardrobe.img[4], context);
+    precacheImage(Wardrobe.img[5], context);
     precacheImage(background, context);
     precacheImage(logo.image, context);
     super.didChangeDependencies();
