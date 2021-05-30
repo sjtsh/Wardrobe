@@ -37,7 +37,7 @@ class Wardrobe extends StatefulWidget {
 
 class WardrobeState extends State<Wardrobe> {
   // _________________________values__________________________________
-  int index = 2;
+  static int index = 2;
   int productIndex;
   AssetImage background = AssetImage("assets/home_background.png");
   Image logo = Image.asset("assets/home_logo.png");
@@ -102,19 +102,24 @@ class WardrobeState extends State<Wardrobe> {
       return CheckoutFooter(_setIndex);
     } else if (index == 4 || index == 6) {
       return Container();
+    } else if (index == 0) {
+      return Navigation(_setIndex, "cart");
+    } else if (index == 1) {
+      return Navigation(_setIndex, "search");
     } else {
-      return Navigation(_setIndex);
+      return Navigation(_setIndex, "none");
     }
   }
 
   Widget changeFloater(int index) {
     if (index == 3) {
       return null;
-    }
-    if (index == 5) {
+    } else if (index == 5) {
       return DescriptionFloater();
+    } else if (index == 2) {
+      return Floater(_setIndex, "home");
     } else {
-      return Floater(_setIndex);
+      return Floater(_setIndex, "not");
     }
   }
 

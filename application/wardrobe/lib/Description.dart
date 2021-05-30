@@ -13,15 +13,18 @@ class Description extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Container(
-          height: 300,
-          width: 250,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: Wardrobe.img[productIndex]),
-              borderRadius: BorderRadius.all(Radius.circular(25))),
+        Hero(
+        tag: "des",
+          child: Container(
+            height: 300,
+            width: 250,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: Wardrobe.img[productIndex]),
+                borderRadius: BorderRadius.all(Radius.circular(25))),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.only(top:10.0),
